@@ -1,0 +1,52 @@
+from pathlib import Path
+
+from kbd_engine.pcbnew_adapter import PcbnewAdapter
+
+
+def test_adapter_board_lifecycle(tmp_path: Path) -> None:
+    filepath = str(tmp_path / "test.kicad_pcb")
+    adapter = PcbnewAdapter()
+
+    # Load / Save
+    assert adapter.board is not None
+    adapter.save(filepath)
+
+    new_adapter = PcbnewAdapter()
+    new_adapter.load(filepath)
+    assert new_adapter.board is not None
+
+
+def test_add_footprint() -> None:
+    adapter = PcbnewAdapter()
+    # Let's add a switch footprint. We expect coordinates in mm (e.g., 19.05, 0.0)
+    # Rotation in degrees (e.g. 90.0)
+    fp = adapter.add_footprint(
+        library_path="kbd_custom",
+        footprint_name="SW_Cherry_MX",
+        reference="SW1",
+        x=19.05,
+        y=0.0,
+        rotation=90.0,
+    )
+
+    assert fp is not None
+    footprints = adapter.get_footprints()
+    assert len(footprints) == 1
+    assert footprints[0]["reference"] == "SW1"
+    # KiCad internal units check (1 mm = 1,000,000 IU/nanometers)
+    assert footprints[0]["x"] == 19.05
+    assert footprints[0]["y"] == 0.0
+    assert footprints[0]["rotation"] == 90.0
+
+
+def test_add_track() -> None:
+    adapter = PcbnewAdapter()
+    # Add a track from (0, 0) to (19.05, 0) on F.Cu layer with width 0.25mm
+    track = adapter.add_track(start_x=0.0, start_y=0.0, end_x=19.05, end_y=0.0, layer="F.Cu", width=0.25)
+    assert track is not None
+
+    # Verify track properties via mock
+    assert track.start.x == 0
+    assert track.start.y == 0
+    assert track.end.x == 19050000  # 19.05 mm in nanometers
+    assert track.end.y == 0
