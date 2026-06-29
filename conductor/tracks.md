@@ -6,3 +6,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [ ] **Track: Build core keyboard-to-PCB placement pipeline with MCP server**
   *Link: [./tracks/placement_pipeline_20260629/](./tracks/placement_pipeline_20260629/)*
+
+---
+
+- [ ] **Track: Implement automated trace routing pipeline with multi-router dispatch (Rust A*, Quilter, FreeRouting)**
+  *Link: [./tracks/routing_pipeline_20260629/](./tracks/routing_pipeline_20260629/)*
