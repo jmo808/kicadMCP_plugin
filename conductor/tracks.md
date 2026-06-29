@@ -31,3 +31,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [ ] **Track: Implement Component Abstraction Layer and Footprint Registry**
   *Link: [./tracks/component_registry_20260629/](./tracks/component_registry_20260629/)*
+
+---
+
+- [ ] **Track: Implement Custom JSON Matrix Definition Parser and Schema**
+  *Link: [./tracks/json_matrix_schema_20260629/](./tracks/json_matrix_schema_20260629/)*
