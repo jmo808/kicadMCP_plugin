@@ -2,7 +2,7 @@
 
 ## Phase 1: Project Scaffolding & Foundation
 
-- [ ] Task: Initialize Python package structure and development environment
+- [~] Task: Initialize Python package structure and development environment
     - [ ] Create `kbd_engine/` package with `__init__.py`
     - [ ] Create `tests/` directory with `conftest.py`
     - [ ] Create `pyproject.toml` with dependencies (fastmcp, pytest, ruff, mypy, pytest-cov)
