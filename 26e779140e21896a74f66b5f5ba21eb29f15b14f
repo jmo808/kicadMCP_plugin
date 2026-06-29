@@ -1,0 +1,9 @@
+Task: Create pcbnew adapter layer (kbd_engine/pcbnew_adapter.py)
+
+Description: Created the thin pcbnew adapter layer that wraps KiCad API calls (loading/saving boards, placing footprints, and adding tracks), abstracting unit conversions and KiCad classes. Created a mock pcbnew module for test execution without a host KiCad installation and registered it via conftest.py. Wrote unit tests confirming footprint placement, track routing, and coordinates translation.
+
+Modified Files:
+- kbd_engine/pcbnew_adapter.py
+- tests/mock_pcbnew.py
+- tests/test_pcbnew_adapter.py
+- tests/conftest.py
