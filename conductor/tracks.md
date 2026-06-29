@@ -21,3 +21,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [ ] **Track: Build TypeScript web-based keyboard layout editor with live PCB preview**
   *Link: [./tracks/web_editor_20260629/](./tracks/web_editor_20260629/)*
+
+---
+
+- [ ] **Track: Build interactive KiCad wxPython dialog for layout configuration and placement preview**
+  *Link: [./tracks/wxpython_dialog_20260629/](./tracks/wxpython_dialog_20260629/)*
