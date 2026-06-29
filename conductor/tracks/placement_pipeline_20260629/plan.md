@@ -22,11 +22,11 @@
     - [x] Implement `KbdEngineError` base exception and subclasses: `ParseError`, `PlacementError`, `RegistryError`, `DrcError`, `RouterError`
     - [x] Verify all tests pass
 
-- [ ] Task: Create pcbnew adapter layer (`kbd_engine/pcbnew_adapter.py`)
-    - [ ] Write tests for adapter interface using mock pcbnew module
-    - [ ] Implement thin adapter wrapping pcbnew API calls (create_footprint, set_position, add_track, run_drc)
-    - [ ] Create mock pcbnew module in `tests/mock_pcbnew.py` for testing without KiCad
-    - [ ] Verify all tests pass with mocked pcbnew
+- [x] Task: Create pcbnew adapter layer (`kbd_engine/pcbnew_adapter.py`) (26e7791)
+    - [x] Write tests for adapter interface using mock pcbnew module
+    - [x] Implement thin adapter wrapping pcbnew API calls (create_footprint, set_position, add_track, run_drc)
+    - [x] Create mock pcbnew module in `tests/mock_pcbnew.py` for testing without KiCad
+    - [x] Verify all tests pass with mocked pcbnew
 
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Project Scaffolding & Foundation' (Protocol in workflow.md)
 
