@@ -16,3 +16,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [ ] **Track: Add split ergonomic board support (Dactyl Manuform, Sofle, Lily58) to placement and routing**
   *Link: [./tracks/split_boards_20260629/](./tracks/split_boards_20260629/)*
+
+---
+
+- [ ] **Track: Build TypeScript web-based keyboard layout editor with live PCB preview**
+  *Link: [./tracks/web_editor_20260629/](./tracks/web_editor_20260629/)*
