@@ -1,0 +1,7 @@
+Task: Define core data models (kbd_engine/models.py)
+
+Description: Created the Key, KeyMatrix, and PlacementResult data models as frozen dataclasses to ensure immutable state. Integrated logical key ID generation logic and basic coordinate matrices lookup methods. Wrote unit tests confirming positioning, bounds, matrix lookup, and immutability constraints.
+
+Modified Files:
+- kbd_engine/models.py
+- tests/test_models.py
