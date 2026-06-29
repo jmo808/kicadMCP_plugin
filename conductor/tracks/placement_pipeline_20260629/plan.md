@@ -2,13 +2,13 @@
 
 ## Phase 1: Project Scaffolding & Foundation
 
-- [~] Task: Initialize Python package structure and development environment
-    - [ ] Create `kbd_engine/` package with `__init__.py`
-    - [ ] Create `tests/` directory with `conftest.py`
-    - [ ] Create `pyproject.toml` with dependencies (fastmcp, pytest, ruff, mypy, pytest-cov)
-    - [ ] Create virtual environment and install dependencies
-    - [ ] Create `ruff.toml` configuration for linting/formatting
-    - [ ] Verify `pytest`, `ruff`, and `mypy` run successfully on empty package
+- [x] Task: Initialize Python package structure and development environment (89906de)
+    - [x] Create `kbd_engine/` package with `__init__.py`
+    - [x] Create `tests/` directory with `conftest.py`
+    - [x] Create `pyproject.toml` with dependencies (fastmcp, pytest, ruff, mypy, pytest-cov)
+    - [x] Create virtual environment and install dependencies
+    - [x] Create `ruff.toml` configuration for linting/formatting
+    - [x] Verify `pytest`, `ruff`, and `mypy` run successfully on empty package
 
 - [ ] Task: Define core data models (`kbd_engine/models.py`)
     - [ ] Write tests for `Key` dataclass (position, size, rotation, row/col assignment)
