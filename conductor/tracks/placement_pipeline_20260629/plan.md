@@ -10,12 +10,12 @@
     - [x] Create `ruff.toml` configuration for linting/formatting
     - [x] Verify `pytest`, `ruff`, and `mypy` run successfully on empty package
 
-- [ ] Task: Define core data models (`kbd_engine/models.py`)
-    - [ ] Write tests for `Key` dataclass (position, size, rotation, row/col assignment)
-    - [ ] Write tests for `KeyMatrix` dataclass (collection of Keys with matrix metadata)
-    - [ ] Write tests for `PlacementResult` dataclass (component positions and validation status)
-    - [ ] Implement `Key`, `KeyMatrix`, and `PlacementResult` dataclasses with type hints
-    - [ ] Verify all tests pass and models are frozen/immutable where appropriate
+- [x] Task: Define core data models (`kbd_engine/models.py`) (3abbe90)
+    - [x] Write tests for `Key` dataclass (position, size, rotation, row/col assignment)
+    - [x] Write tests for `KeyMatrix` dataclass (collection of Keys with matrix metadata)
+    - [x] Write tests for `PlacementResult` dataclass (component positions and validation status)
+    - [x] Implement `Key`, `KeyMatrix`, and `PlacementResult` dataclasses with type hints
+    - [x] Verify all tests pass and models are frozen/immutable where appropriate
 
 - [ ] Task: Create custom exception hierarchy (`kbd_engine/exceptions.py`)
     - [ ] Write tests for exception classes carrying structured context (component ref, position, constraint)
