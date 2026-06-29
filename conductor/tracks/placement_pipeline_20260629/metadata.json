@@ -1,0 +1,8 @@
+{
+  "track_id": "placement_pipeline_20260629",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-29T18:25:00Z",
+  "updated_at": "2026-06-29T18:25:00Z",
+  "description": "Build core keyboard-to-PCB placement pipeline with MCP server"
+}
