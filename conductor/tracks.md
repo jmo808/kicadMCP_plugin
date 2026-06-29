@@ -26,3 +26,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [ ] **Track: Build interactive KiCad wxPython dialog for layout configuration and placement preview**
   *Link: [./tracks/wxpython_dialog_20260629/](./tracks/wxpython_dialog_20260629/)*
+
+---
+
+- [ ] **Track: Implement Component Abstraction Layer and Footprint Registry**
+  *Link: [./tracks/component_registry_20260629/](./tracks/component_registry_20260629/)*
