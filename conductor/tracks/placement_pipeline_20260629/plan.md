@@ -17,10 +17,10 @@
     - [x] Implement `Key`, `KeyMatrix`, and `PlacementResult` dataclasses with type hints
     - [x] Verify all tests pass and models are frozen/immutable where appropriate
 
-- [ ] Task: Create custom exception hierarchy (`kbd_engine/exceptions.py`)
-    - [ ] Write tests for exception classes carrying structured context (component ref, position, constraint)
-    - [ ] Implement `KbdEngineError` base exception and subclasses: `ParseError`, `PlacementError`, `RegistryError`, `DrcError`, `RouterError`
-    - [ ] Verify all tests pass
+- [x] Task: Create custom exception hierarchy (`kbd_engine/exceptions.py`) (3739c9b)
+    - [x] Write tests for exception classes carrying structured context (component ref, position, constraint)
+    - [x] Implement `KbdEngineError` base exception and subclasses: `ParseError`, `PlacementError`, `RegistryError`, `DrcError`, `RouterError`
+    - [x] Verify all tests pass
 
 - [ ] Task: Create pcbnew adapter layer (`kbd_engine/pcbnew_adapter.py`)
     - [ ] Write tests for adapter interface using mock pcbnew module
