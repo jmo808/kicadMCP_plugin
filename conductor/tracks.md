@@ -41,3 +41,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [ ] **Track: Add automated DRC validation and rule checking pipeline**
   *Link: [./tracks/drc_validation_20260629/](./tracks/drc_validation_20260629/)*
+
+---
+
+- [ ] **Track: Build integration tests and CI/CD deployment pipeline**
+  *Link: [./tracks/cicd_pipeline_20260629/](./tracks/cicd_pipeline_20260629/)*
