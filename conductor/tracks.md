@@ -36,3 +36,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [ ] **Track: Implement Custom JSON Matrix Definition Parser and Schema**
   *Link: [./tracks/json_matrix_schema_20260629/](./tracks/json_matrix_schema_20260629/)*
+
+---
+
+- [ ] **Track: Add automated DRC validation and rule checking pipeline**
+  *Link: [./tracks/drc_validation_20260629/](./tracks/drc_validation_20260629/)*
