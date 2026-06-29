@@ -1,0 +1,7 @@
+Task: Create custom exception hierarchy (kbd_engine/exceptions.py)
+
+Description: Implemented a robust structured exception hierarchy subclassing KbdEngineError. Added specific context-carrying exception classes: ParseError, PlacementError, RegistryError, DrcError, and RouterError. Wrote comprehensive tests asserting exception context fields and formatted error strings.
+
+Modified Files:
+- kbd_engine/exceptions.py
+- tests/test_exceptions.py
