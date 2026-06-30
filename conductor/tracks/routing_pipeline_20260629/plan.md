@@ -55,13 +55,13 @@
     - [x] Implement grid-based A* with obstacle avoidance, layer transitions, and via insertion
     - [x] Verify all Rust tests pass
 
-- [ ] Task: Build PyO3 FFI binding (`kbd_router/src/python.rs`)
-    - [ ] Configure PyO3 in `Cargo.toml` with `pyo3/extension-module` feature
-    - [ ] Write Python tests calling Rust router via PyO3 for a simple 4-net routing
-    - [ ] Implement PyO3 module exposing `route_board(request_json: str) → str` function
-    - [ ] Write Python tests verifying identical output to Rust-native tests
-    - [ ] Build wheel with `maturin develop` and verify import in Python
-    - [ ] Verify all tests pass
+- [x] Task: Build PyO3 FFI binding (`kbd_router/src/python.rs`) (902f19e)
+    - [x] Configure PyO3 in `Cargo.toml` with `pyo3/extension-module` feature
+    - [x] Write Python tests calling Rust router via PyO3 for a simple 4-net routing
+    - [x] Implement PyO3 module exposing `route_board(request_json: str) → str` function
+    - [x] Write Python tests verifying identical output to Rust-native tests
+    - [x] Build wheel with `maturin develop` and verify import in Python
+    - [x] Verify all tests pass
 
 - [ ] Task: Build subprocess + JSON I/O CLI (`kbd_router/src/bin/cli.rs`)
     - [ ] Write Rust integration test for CLI reading JSON from stdin and writing result to stdout
