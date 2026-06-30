@@ -90,14 +90,14 @@
 
 ## Phase 3: External Router Integrations
 
-- [ ] Task: Implement FreeRouting integration (`kbd_engine/routers/freerouting.py`)
-    - [ ] Write tests for DSN export from placed board (Specctra Design format)
-    - [ ] Write tests for FreeRouting subprocess invocation with timeout handling
-    - [ ] Write tests for SES import parsing routed traces back to internal model
-    - [ ] Write tests for error handling (FreeRouting not installed, routing timeout, partial routing)
-    - [ ] Implement `FreeRoutingRouter(Router)` with DSN export → subprocess → SES import pipeline
-    - [ ] Create DSN/SES serializer/deserializer utilities
-    - [ ] Verify all tests pass
+- [x] Task: Implement FreeRouting integration (`kbd_engine/routers/freerouting.py`) (0a4f3b5)
+    - [x] Write tests for DSN export from placed board (Specctra Design format)
+    - [x] Write tests for FreeRouting subprocess invocation with timeout handling
+    - [x] Write tests for SES import parsing routed traces back to internal model
+    - [x] Write tests for error handling (FreeRouting not installed, routing timeout, partial routing)
+    - [x] Implement `FreeRoutingRouter(Router)` with DSN export → subprocess → SES import pipeline
+    - [x] Create DSN/SES serializer/deserializer utilities
+    - [x] Verify all tests pass
 
 - [ ] Task: Implement Quilter API integration (`kbd_engine/routers/quilter.py`)
     - [ ] Write tests for Quilter API authentication flow
