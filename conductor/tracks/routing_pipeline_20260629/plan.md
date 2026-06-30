@@ -99,13 +99,13 @@
     - [x] Create DSN/SES serializer/deserializer utilities
     - [x] Verify all tests pass
 
-- [ ] Task: Implement Quilter API integration (`kbd_engine/routers/quilter.py`)
-    - [ ] Write tests for Quilter API authentication flow
-    - [ ] Write tests for board geometry and constraint serialization to Quilter format
-    - [ ] Write tests for routing result deserialization from Quilter response
-    - [ ] Write tests for error handling (auth failure, rate limiting, timeout, partial routing)
-    - [ ] Implement `QuilterRouter(Router)` with REST client, auth, and result mapping
-    - [ ] Verify all tests pass with mocked HTTP responses
+- [x] Task: Implement Quilter API integration (`kbd_engine/routers/quilter.py`) (575c561)
+    - [x] Write tests for Quilter API authentication flow
+    - [x] Write tests for board geometry and constraint serialization to Quilter format
+    - [x] Write tests for routing result deserialization from Quilter response
+    - [x] Write tests for error handling (auth failure, rate limiting, timeout, partial routing)
+    - [x] Implement `QuilterRouter(Router)` with REST client, auth, and result mapping
+    - [x] Verify all tests pass with mocked HTTP responses
 
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: External Router Integrations' (Protocol in workflow.md)
 
