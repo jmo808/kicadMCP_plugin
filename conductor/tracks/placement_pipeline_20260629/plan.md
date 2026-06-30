@@ -50,11 +50,11 @@
     - [x] Create default registry JSON (`kbd_engine/data/default_registry.json`)
     - [x] Verify all tests pass
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: KLE Parser & Component Registry' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: KLE Parser & Component Registry' (Protocol in workflow.md) (6f8228b)
 
 ## Phase 3: Grid Placement Engine
 
-- [ ] Task: Implement grid placement engine (`kbd_engine/placer.py`)
+- [~] Task: Implement grid placement engine (`kbd_engine/placer.py`)
     - [ ] Write tests for switch placement with default 19.05mm pitch on a 4-key row
     - [ ] Write tests for diode placement with configurable Y-offset below each switch
     - [ ] Write tests for capacitor placement adjacent to switches
