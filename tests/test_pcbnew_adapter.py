@@ -50,3 +50,18 @@ def test_add_track() -> None:
     assert track.start.y == 0
     assert track.end.x == 19050000  # 19.05 mm in nanometers
     assert track.end.y == 0
+
+
+def test_net_class_methods() -> None:
+    adapter = PcbnewAdapter()
+    adapter.create_net_class(
+        name="Power",
+        track_width=0.5,
+        clearance=0.25,
+        via_diameter=0.8,
+        via_drill=0.4,
+    )
+    assert "Power" in adapter.board.GetNetClasses().classes
+
+    adapter.set_net_class("VCC", "Power")
+    assert adapter.board.GetNetSettings().assignments["VCC"] == "Power"
