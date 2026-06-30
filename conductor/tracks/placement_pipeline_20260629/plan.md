@@ -87,14 +87,14 @@
 
 ## Phase 5: MCP Server & Integration
 
-- [~] Task: Implement MCP server (`kbd_engine/mcp_server.py`)
-    - [ ] Write tests for `place` tool endpoint (KLE JSON input → placement result)
-    - [ ] Write tests for `preview` tool endpoint (dry-run placement → JSON preview)
-    - [ ] Write tests for `validate_drc` tool endpoint (run DRC on current board)
-    - [ ] Write tests for error response formatting (structured JSON errors)
-    - [ ] Implement FastMCP server with `place`, `preview`, and `validate_drc` tools
-    - [ ] Implement structured JSON response format for all endpoints
-    - [ ] Verify all tests pass
+- [x] Task: Implement MCP server (`kbd_engine/mcp_server.py`) (fb1a053)
+    - [x] Write tests for `place` tool endpoint (KLE JSON input → placement result)
+    - [x] Write tests for `preview` tool endpoint (dry-run placement → JSON preview)
+    - [x] Write tests for `validate_drc` tool endpoint (run DRC on current board)
+    - [x] Write tests for error response formatting (structured JSON errors)
+    - [x] Implement FastMCP server with `place`, `preview`, and `validate_drc` tools
+    - [x] Implement structured JSON response format for all endpoints
+    - [x] Verify all tests pass
 
 - [ ] Task: End-to-end integration test
     - [ ] Write integration test: KLE JSON → parse → place → DRC validate (full pipeline)
