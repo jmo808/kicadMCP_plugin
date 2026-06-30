@@ -41,14 +41,14 @@
     - [x] Write tests for a full 60% layout KLE JSON
     - [x] Verify all tests pass
 
-- [ ] Task: Implement component abstraction registry (`kbd_engine/registry.py`)
-    - [ ] Write tests for default footprint resolution (MX switch, SOD-123 diode, 0805 capacitor)
-    - [ ] Write tests for per-key component type overrides
-    - [ ] Write tests for loading custom registry from JSON configuration
-    - [ ] Write tests for `RegistryError` on unknown component types
-    - [ ] Implement `FootprintRegistry` class with built-in defaults and JSON extension
-    - [ ] Create default registry JSON (`kbd_engine/data/default_registry.json`)
-    - [ ] Verify all tests pass
+- [x] Task: Implement component abstraction registry (`kbd_engine/registry.py`) (f515117)
+    - [x] Write tests for default footprint resolution (MX switch, SOD-123 diode, 0805 capacitor)
+    - [x] Write tests for per-key component type overrides
+    - [x] Write tests for loading custom registry from JSON configuration
+    - [x] Write tests for `RegistryError` on unknown component types
+    - [x] Implement `FootprintRegistry` class with built-in defaults and JSON extension
+    - [x] Create default registry JSON (`kbd_engine/data/default_registry.json`)
+    - [x] Verify all tests pass
 
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: KLE Parser & Component Registry' (Protocol in workflow.md)
 
