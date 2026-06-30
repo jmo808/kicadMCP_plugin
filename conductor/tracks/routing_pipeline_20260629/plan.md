@@ -63,12 +63,12 @@
     - [x] Build wheel with `maturin develop` and verify import in Python
     - [x] Verify all tests pass
 
-- [ ] Task: Build subprocess + JSON I/O CLI (`kbd_router/src/bin/cli.rs`)
-    - [ ] Write Rust integration test for CLI reading JSON from stdin and writing result to stdout
-    - [ ] Write Python tests calling CLI subprocess and parsing JSON output
-    - [ ] Implement `kbd-router-cli` binary with JSON stdin/stdout interface
-    - [ ] Write Python tests verifying identical output between PyO3 and subprocess modes
-    - [ ] Verify all tests pass
+- [x] Task: Build subprocess + JSON I/O CLI (`kbd_router/src/bin/cli.rs`) (df68fa9)
+    - [x] Write Rust integration test for CLI reading JSON from stdin and writing result to stdout
+    - [x] Write Python tests calling CLI subprocess and parsing JSON output
+    - [x] Implement `kbd-router-cli` binary with JSON stdin/stdout interface
+    - [x] Write Python tests verifying identical output between PyO3 and subprocess modes
+    - [x] Verify all tests pass
 
 - [ ] Task: Build REST API wrapper (`kbd_router/src/bin/server.rs`)
     - [ ] Add `axum` or `actix-web` dependency for HTTP server
