@@ -1,13 +1,13 @@
 import json
-from typing import Any
+
 from fastmcp import FastMCP
 
+from kbd_engine.drc import DrcValidator
 from kbd_engine.exceptions import KbdEngineError
 from kbd_engine.kle_parser import parse_kle_json
-from kbd_engine.registry import FootprintRegistry
-from kbd_engine.placer import GridPlacer, apply_placement
-from kbd_engine.drc import DrcValidator
 from kbd_engine.pcbnew_adapter import PcbnewAdapter
+from kbd_engine.placer import GridPlacer, apply_placement
+from kbd_engine.registry import FootprintRegistry
 
 # Create FastMCP server instance
 mcp = FastMCP("kbd_engine")
