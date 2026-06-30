@@ -1,0 +1,7 @@
+Task: Implement DRC validation gate (kbd_engine/drc.py)
+
+Description: Implemented coordinate-based physical overlap (collision) and clearance validation gate (DrcValidator). Determines approximate component radii dynamically based on reference designator prefixes. Enables dry-run checking without needing a saved board or host KiCad installation. Wrote unit tests validating collision and clearance violations.
+
+Modified Files:
+- kbd_engine/drc.py
+- tests/test_drc.py
