@@ -1,0 +1,8 @@
+Task: Implement net class assignment engine (kbd_engine/net_classes.py)
+Summary of changes:
+- Created NetClassManager class to parse and load default and custom net class configurations (JSON format).
+- Added match_net mapping logic to associate nets with their classes based on regex patterns.
+- Added apply_to_board integrating with PcbnewAdapter to create netclasses and set netclass assignments on the board.
+- Added create_net_class and set_net_class methods to PcbnewAdapter.
+- Added unit tests in tests/test_net_classes.py verifying default configs, pattern matching, custom configurations, and board application.
+Why: Automates the setup of net classes and design rules on the KiCad PCB prior to routing.
