@@ -1,6 +1,7 @@
 import math
 from typing import Any
 
+from kbd_engine.exceptions import PlacementError
 from kbd_engine.models import KeyMatrix, PlacementResult
 from kbd_engine.registry import FootprintRegistry
 
@@ -61,3 +62,33 @@ class GridPlacer:
             }
 
         return PlacementResult(placements=placements, valid=True)
+
+
+def apply_placement(result: PlacementResult, adapter: Any, dry_run: bool = False) -> None:
+    """Applies the placements from a PlacementResult onto a KiCad board using the adapter.
+
+    If dry_run is True, no footprint placing changes are written to the board.
+    """
+    if dry_run:
+        return
+
+    for ref, data in result.placements.items():
+        footprint_str = data["footprint"]
+        if ":" not in footprint_str:
+            raise PlacementError(
+                f"Footprint '{footprint_str}' for component '{ref}' does not follow the "
+                "required 'Library_Name:Footprint_Name' format.",
+                key_id=ref,
+                x=data["x"],
+                y=data["y"],
+            )
+        lib_path, fp_name = footprint_str.split(":", 1)
+        adapter.add_footprint(
+            library_path=lib_path,
+            footprint_name=fp_name,
+            reference=ref,
+            x=data["x"],
+            y=data["y"],
+            rotation=data["rotation"],
+        )
+
