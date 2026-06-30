@@ -77,14 +77,14 @@
     - [x] Implement lightweight HTTP server with `/route` POST endpoint
     - [x] Verify all tests pass
 
-- [ ] Task: Implement Python adapter for Rust A* router (`kbd_engine/routers/rust_astar.py`)
-    - [ ] Write tests for PyO3 mode routing a 60-key matrix
-    - [ ] Write tests for subprocess fallback when PyO3 import fails
-    - [ ] Write tests for REST mode routing via HTTP client
-    - [ ] Write tests for mode auto-detection (PyO3 → subprocess → REST)
-    - [ ] Implement `RustAstarRouter(Router)` with configurable integration mode
-    - [ ] Verify all tests pass
-    - [ ] Verify 60-key matrix routes in <10 seconds via PyO3 (NFR-01)
+- [x] Task: Implement Python adapter for Rust A* router (`kbd_engine/routers/rust_astar.py`) (daf0b25)
+    - [x] Write tests for PyO3 mode routing a 60-key matrix
+    - [x] Write tests for subprocess fallback when PyO3 import fails
+    - [x] Write tests for REST mode routing via HTTP client
+    - [x] Write tests for mode auto-detection (PyO3 → subprocess → REST)
+    - [x] Implement `RustAstarRouter(Router)` with configurable integration mode
+    - [x] Verify all tests pass
+    - [x] Verify 60-key matrix routes in <10 seconds via PyO3 (NFR-01) (be89c39)
 
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Rust A* Routing Engine' (Protocol in workflow.md)
 
