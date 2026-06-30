@@ -1,0 +1,6 @@
+Task: End-to-end integration tests (tests/test_e2e.py)
+Summary of changes:
+- Wrote test_e2e_kle_to_route_pipeline simulating full workflow (KLE parsing -> placing -> routing -> automated via insertion -> board loading/writing).
+- Wrote test_e2e_mcp_route_backends mock-testing route endpoint with FreeRouting and Quilter router backends.
+- Wrote test_e2e_routing_failure_details validating structured routing error responses with unrouted net details and diagnostics.
+Why: Ensures correctness of the entire layout generation, placement, DRC checking, and multi-backend routing flow.
