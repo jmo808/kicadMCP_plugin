@@ -2,6 +2,9 @@ use serde::{Deserialize, Serialize};
 
 pub mod astar;
 
+#[cfg(feature = "python")]
+pub mod python;
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub struct Point {
     pub x: i32,
