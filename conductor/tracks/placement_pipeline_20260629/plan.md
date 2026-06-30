@@ -64,11 +64,11 @@
     - [x] Verify placement completes in <5 seconds for 60-key layout (NFR-01)
     - [x] Verify all tests pass
 
-- [ ] Task: Integrate placement with pcbnew adapter
-    - [ ] Write tests for `apply_placement()` writing PlacementResult to a board via adapter
-    - [ ] Write tests for dry-run mode returning preview without modifying board
-    - [ ] Implement `apply_placement(result, adapter, dry_run=False)` function
-    - [ ] Verify all tests pass with mocked pcbnew
+- [x] Task: Integrate placement with pcbnew adapter (`kbd_engine/placer.py`) (7ebad3f)
+    - [x] Write tests for `apply_placement()` writing PlacementResult to a board via adapter
+    - [x] Write tests for dry-run mode returning preview without modifying board
+    - [x] Implement `apply_placement(result, adapter, dry_run=False)` function
+    - [x] Verify all tests pass with mocked pcbnew
 
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Grid Placement Engine' (Protocol in workflow.md)
 
