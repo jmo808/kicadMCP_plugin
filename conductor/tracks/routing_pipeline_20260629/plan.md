@@ -109,7 +109,7 @@
 
 - [x] Task: Conductor - User Manual Verification 'Phase 3: External Router Integrations' (Protocol in workflow.md) (1396af6)
 
-## Phase 4: Via Insertion & Board Writing
+## Phase 4: Via Insertion & Board Writing [checkpoint: 3064ece]
 
 - [x] Task: Implement via insertion engine (`kbd_engine/via_inserter.py`) (bb1355e)
     - [x] Write tests for via insertion at layer transition points in routing result
@@ -127,7 +127,7 @@
     - [x] Implement `apply_net_classes(net_class_manager, adapter)` function
     - [x] Verify all tests pass with mocked pcbnew
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 4: Via Insertion & Board Writing' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 4: Via Insertion & Board Writing' (Protocol in workflow.md) (3064ece)
 
 ## Phase 5: MCP Endpoints & End-to-End Integration
 
