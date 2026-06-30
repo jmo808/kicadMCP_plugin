@@ -1,0 +1,6 @@
+{
+  "switch": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+  "diode": "Diode_SMD:D_SOD-123",
+  "capacitor": "Capacitor_SMD:C_0805_2012Metric",
+  "overrides": {}
+}
