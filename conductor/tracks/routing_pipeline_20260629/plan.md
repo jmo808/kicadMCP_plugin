@@ -2,13 +2,13 @@
 
 ## Phase 1: Routing Foundation & Data Models
 
-- [ ] Task: Define routing data models (`kbd_engine/routing_models.py`)
-    - [ ] Write tests for `RoutingRequest` dataclass (board geometry, netlist, constraints, router selection)
-    - [ ] Write tests for `RoutingResult` dataclass (trace paths, via locations, unrouted nets, diagnostics)
-    - [ ] Write tests for `NetClass` dataclass (name, track width, clearance, via diameter)
-    - [ ] Write tests for `TraceSegment` and `Via` dataclasses (start/end points, layer, width)
-    - [ ] Implement all routing data models with type hints and frozen dataclasses
-    - [ ] Verify all tests pass
+- [x] Task: Define routing data models (`kbd_engine/routing_models.py`) (e972594)
+    - [x] Write tests for `RoutingRequest` dataclass (board geometry, netlist, constraints, router selection)
+    - [x] Write tests for `RoutingResult` dataclass (trace paths, via locations, unrouted nets, diagnostics)
+    - [x] Write tests for `NetClass` dataclass (name, track width, clearance, via diameter)
+    - [x] Write tests for `TraceSegment` and `Via` dataclasses (start/end points, layer, width)
+    - [x] Implement all routing data models with type hints and frozen dataclasses
+    - [x] Verify all tests pass
 
 - [ ] Task: Define Router protocol and dispatch interface (`kbd_engine/router.py`)
     - [ ] Write tests for `Router` ABC with `route(request) → RoutingResult` contract
