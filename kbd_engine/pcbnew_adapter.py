@@ -192,3 +192,39 @@ class PcbnewAdapter:
         self.board.Add(via)
         return via
 
+    def get_footprint_pads(self, ref: str) -> list[tuple[str, tuple[float, float]]]:
+        """Get relative pad coordinates for a footprint in mm.
+
+        Args:
+            ref: Reference designator of the footprint.
+
+        Returns:
+            A list of tuples (pad_name, (x, y)) of relative coordinates in mm.
+        """
+        fp = self.find_footprint_by_reference(ref)
+        if fp is None:
+            return []
+        pads = []
+        # GetPads is on our mock, in KiCad it's Pads()
+        fp_pads = fp.GetPads() if hasattr(fp, "GetPads") else fp.Pads()
+        for pad in fp_pads:
+            if hasattr(pad, "offset"):
+                ox = pad.offset.x / 1000000.0
+                oy = pad.offset.y / 1000000.0
+                pads.append((pad.name, (ox, oy)))
+            else:
+                import math
+                fp_pos = fp.GetPosition()
+                pad_pos = pad.GetPosition()
+                dx = pad_pos.GetX() - fp_pos.GetX()
+                dy = pad_pos.GetY() - fp_pos.GetY()
+                # Rotate backwards by footprint orientation
+                rad = -math.radians(fp.GetOrientation().AsDegrees())
+                rx = dx * math.cos(rad) - dy * math.sin(rad)
+                ry = dx * math.sin(rad) + dy * math.cos(rad)
+                # GetName on PAD in KiCad, name on mock
+                pad_name = pad.GetName() if hasattr(pad, "GetName") else getattr(pad, "name", "")
+                pads.append((pad_name, (rx / 1000000.0, ry / 1000000.0)))
+        return pads
+
+
