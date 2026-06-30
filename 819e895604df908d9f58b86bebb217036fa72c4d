@@ -1,0 +1,7 @@
+Task: Integrate routing results with pcbnew adapter (kbd_engine/pcbnew_adapter.py)
+Summary of changes:
+- Implemented apply_routing function writing traces and vias from RoutingResult to the board, supporting dry_run preview mode.
+- Implemented apply_net_classes mapping board net connections to matched net class rule definitions in NetClassManager.
+- Updated mock_pcbnew.py to add GetNetsByName on BOARD and GetNetname/SetNetname on PAD.
+- Wrote integration tests in tests/test_pcbnew_adapter.py covering normal track/via writing, dry-run mode, and net class assignment logic.
+Why: Bridges the abstract router outputs back to the physical KiCad layout board representation.
