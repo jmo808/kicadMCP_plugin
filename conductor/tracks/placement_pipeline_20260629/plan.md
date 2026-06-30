@@ -83,11 +83,11 @@
     - [x] Implement coordinate-based clearance check for dry-run mode (no board write)
     - [x] Verify all tests pass
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 4: DRC Validation Gate' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 4: DRC Validation Gate' (Protocol in workflow.md) (3f45fd0)
 
 ## Phase 5: MCP Server & Integration
 
-- [ ] Task: Implement MCP server (`kbd_engine/mcp_server.py`)
+- [~] Task: Implement MCP server (`kbd_engine/mcp_server.py`)
     - [ ] Write tests for `place` tool endpoint (KLE JSON input → placement result)
     - [ ] Write tests for `preview` tool endpoint (dry-run placement → JSON preview)
     - [ ] Write tests for `validate_drc` tool endpoint (run DRC on current board)
