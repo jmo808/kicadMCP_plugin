@@ -3,7 +3,6 @@ import os
 import shutil
 import subprocess
 import urllib.request
-from typing import Any, Optional
 
 from kbd_engine.exceptions import RouterError
 from kbd_engine.pcbnew_adapter import PcbnewAdapter
@@ -17,7 +16,7 @@ class RustAstarRouter(Router):
     def __init__(
         self,
         mode: str = "auto",
-        cli_path: Optional[str] = None,
+        cli_path: str | None = None,
         server_url: str = "http://127.0.0.1:8080/route",
     ) -> None:
         """Initialize the Rust A* router.
@@ -190,7 +189,7 @@ class RustAstarRouter(Router):
 
         return result
 
-    def _detect_cli(self) -> Optional[str]:
+    def _detect_cli(self) -> str | None:
         possible_paths = [
             "./kbd_router/target/debug/kbd-router-cli",
             "./kbd_router/target/release/kbd-router-cli",
@@ -213,8 +212,8 @@ class RustAstarRouter(Router):
 
         traces = [
             TraceSegment(
-                start=tuple(seg["start"]),  # type: ignore[arg-type]
-                end=tuple(seg["end"]),  # type: ignore[arg-type]
+                start=tuple(seg["start"]),
+                end=tuple(seg["end"]),
                 layer=seg["layer"],
                 width=seg["width"],
             )
@@ -222,10 +221,10 @@ class RustAstarRouter(Router):
         ]
         vias = [
             Via(
-                position=tuple(v["position"]),  # type: ignore[arg-type]
+                position=tuple(v["position"]),
                 drill=v["drill"],
                 diameter=v["diameter"],
-                layers=tuple(v["layers"]),  # type: ignore[arg-type]
+                layers=tuple(v["layers"]),
             )
             for v in data.get("vias", [])
         ]
