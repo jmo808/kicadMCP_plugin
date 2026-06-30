@@ -46,14 +46,14 @@
     - [x] Write Rust unit tests for data structure serialization/deserialization
     - [x] Verify `cargo test` passes
 
-- [ ] Task: Implement A* pathfinding core in Rust (`kbd_router/src/astar.rs`)
-    - [ ] Write Rust tests for A* routing a single 2-point net on an empty grid
-    - [ ] Write Rust tests for routing around rectangular obstacles
-    - [ ] Write Rust tests for multi-net routing with net ordering
-    - [ ] Write Rust tests for via insertion at layer transitions (F.Cu ↔ B.Cu)
-    - [ ] Write Rust tests for routing failure (no valid path) returning diagnostics
-    - [ ] Implement grid-based A* with obstacle avoidance, layer transitions, and via insertion
-    - [ ] Verify all Rust tests pass
+- [x] Task: Implement A* pathfinding core in Rust (`kbd_router/src/astar.rs`) (9a34b9b)
+    - [x] Write Rust tests for A* routing a single 2-point net on an empty grid
+    - [x] Write Rust tests for routing around rectangular obstacles
+    - [x] Write Rust tests for multi-net routing with net ordering
+    - [x] Write Rust tests for via insertion at layer transitions (F.Cu ↔ B.Cu)
+    - [x] Write Rust tests for routing failure (no valid path) returning diagnostics
+    - [x] Implement grid-based A* with obstacle avoidance, layer transitions, and via insertion
+    - [x] Verify all Rust tests pass
 
 - [ ] Task: Build PyO3 FFI binding (`kbd_router/src/python.rs`)
     - [ ] Configure PyO3 in `Cargo.toml` with `pyo3/extension-module` feature
