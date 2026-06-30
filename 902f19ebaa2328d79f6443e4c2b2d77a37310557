@@ -1,0 +1,8 @@
+Task: Build PyO3 FFI binding (kbd_router/src/python.rs)
+Summary of changes:
+- Created python.rs exposing route_board function to Python.
+- Configured PEP-517 compilation in pyproject.toml utilizing maturin build backend.
+- Conditionally declared python module in lib.rs behind python feature.
+- Built and installed the compiled Python wheel in the virtual environment.
+- Added Python unit test in tests/test_rust_router.py verifying successful import, invocation, and correct routing outputs.
+Why: Exposes the high-performance Rust A* pathfinder to Python via PyO3, enabling direct Python pipeline integration.
