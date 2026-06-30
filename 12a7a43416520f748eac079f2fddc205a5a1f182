@@ -1,0 +1,6 @@
+Task: Define Router protocol and dispatch interface (kbd_engine/router.py)
+Summary of changes:
+- Created Router abstract base class defining the contract for all routing backends.
+- Created RouterDispatch class to register and lookup router backends.
+- Wrote unit tests in tests/test_router.py verifying registration, lookup, RouterError on unknown router, and abstract class instantiation failure.
+Why: Establishes the core dispatch system for executing automated routing using multiple pluggable backends.
