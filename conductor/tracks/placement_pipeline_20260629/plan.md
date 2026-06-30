@@ -96,13 +96,13 @@
     - [x] Implement structured JSON response format for all endpoints
     - [x] Verify all tests pass
 
-- [ ] Task: End-to-end integration test
-    - [ ] Write integration test: KLE JSON → parse → place → DRC validate (full pipeline)
-    - [ ] Write integration test: MCP `place` endpoint with dry_run=True returns valid preview JSON
-    - [ ] Write integration test: MCP `place` endpoint with invalid KLE JSON returns actionable error
-    - [ ] Verify all integration tests pass
-    - [ ] Run `pytest --cov=kbd_engine --cov-report=html` and verify >80% coverage
-    - [ ] Run `ruff check kbd_engine/ tests/` and verify zero errors
-    - [ ] Run `mypy kbd_engine/` and verify zero errors
+- [x] Task: End-to-end integration test (0b8a101)
+    - [x] Write integration test: KLE JSON → parse → place → DRC validate (full pipeline)
+    - [x] Write integration test: MCP `preview` endpoint returns valid preview JSON
+    - [x] Write integration test: MCP `place` endpoint with invalid KLE JSON returns actionable error
+    - [x] Verify all integration tests pass
+    - [x] Run `pytest --cov=kbd_engine --cov-report=html` and verify >80% coverage
+    - [x] Run `ruff check kbd_engine/ tests/` and verify zero errors
+    - [x] Run `mypy kbd_engine/` and verify zero errors
 
 - [ ] Task: Conductor - User Manual Verification 'Phase 5: MCP Server & Integration' (Protocol in workflow.md)
