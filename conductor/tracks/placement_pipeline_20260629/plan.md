@@ -28,11 +28,11 @@
     - [x] Create mock pcbnew module in `tests/mock_pcbnew.py` for testing without KiCad
     - [x] Verify all tests pass with mocked pcbnew
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Project Scaffolding & Foundation' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Project Scaffolding & Foundation' (Protocol in workflow.md) (0d148ca)
 
 ## Phase 2: KLE Parser & Component Registry
 
-- [ ] Task: Implement KLE JSON parser (`kbd_engine/kle_parser.py`)
+- [~] Task: Implement KLE JSON parser (`kbd_engine/kle_parser.py`)
     - [ ] Write tests for parsing a minimal 4-key KLE JSON into KeyMatrix
     - [ ] Write tests for parsing key sizes (1u, 1.25u, 1.5u, 2u, 6.25u)
     - [ ] Write tests for parsing key rotation angles
