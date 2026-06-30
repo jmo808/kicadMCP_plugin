@@ -119,13 +119,13 @@
     - [x] Implement `ViaInserter` class processing RoutingResult and inserting optimal vias
     - [x] Verify all tests pass
 
-- [ ] Task: Integrate routing results with pcbnew adapter
-    - [ ] Write tests for `apply_routing()` writing TraceSegments and Vias to board via adapter
-    - [ ] Write tests for dry-run mode returning preview without modifying board
-    - [ ] Write tests for applying net classes to board before routing
-    - [ ] Implement `apply_routing(result, adapter, dry_run=False)` function
-    - [ ] Implement `apply_net_classes(net_class_manager, adapter)` function
-    - [ ] Verify all tests pass with mocked pcbnew
+- [x] Task: Integrate routing results with pcbnew adapter (819e895)
+    - [x] Write tests for `apply_routing()` writing TraceSegments and Vias to board via adapter
+    - [x] Write tests for dry-run mode returning preview without modifying board
+    - [x] Write tests for applying net classes to board before routing
+    - [x] Implement `apply_routing(result, adapter, dry_run=False)` function
+    - [x] Implement `apply_net_classes(net_class_manager, adapter)` function
+    - [x] Verify all tests pass with mocked pcbnew
 
 - [ ] Task: Conductor - User Manual Verification 'Phase 4: Via Insertion & Board Writing' (Protocol in workflow.md)
 
