@@ -1,0 +1,7 @@
+Task: Implement Quilter API integration (kbd_engine/routers/quilter.py)
+Summary of changes:
+- Created QuilterRouter class delegating routing requests to Quilter's REST API.
+- Implemented authentication, POST /jobs submission of DSN payload, and GET /jobs/job_id polling loop.
+- Reused FreeRouting's DSN exporter and SES/S-expression parser for request serialization and response deserialization.
+- Wrote tests in tests/test_quilter.py mock-testing successful submission/polling, authentication failures, rate limiting, job timeouts, and unroutable board failure states.
+Why: Exposes Quilter AI autorouting service as an optional routing backend.
