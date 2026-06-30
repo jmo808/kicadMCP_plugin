@@ -70,11 +70,11 @@
     - [x] Implement `apply_placement(result, adapter, dry_run=False)` function
     - [x] Verify all tests pass with mocked pcbnew
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Grid Placement Engine' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Grid Placement Engine' (Protocol in workflow.md) (3198ed7)
 
 ## Phase 4: DRC Validation Gate
 
-- [ ] Task: Implement DRC validation gate (`kbd_engine/drc.py`)
+- [~] Task: Implement DRC validation gate (`kbd_engine/drc.py`)
     - [ ] Write tests for DRC pass on valid placement (no violations)
     - [ ] Write tests for DRC failure detecting courtyard clearance violations
     - [ ] Write tests for DRC failure detecting overlapping footprints
