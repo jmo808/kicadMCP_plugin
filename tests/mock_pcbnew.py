@@ -1,5 +1,6 @@
 # Mock implementation of pcbnew for unit testing without KiCad installed.
 
+
 class VECTOR2I:
     def __init__(self, x: int = 0, y: int = 0) -> None:
         self.x = x

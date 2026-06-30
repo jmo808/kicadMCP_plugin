@@ -91,4 +91,3 @@ def apply_placement(result: PlacementResult, adapter: Any, dry_run: bool = False
             y=data["y"],
             rotation=data["rotation"],
         )
-
