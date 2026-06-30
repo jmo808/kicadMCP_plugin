@@ -52,7 +52,7 @@
 
 - [x] Task: Conductor - User Manual Verification 'Phase 2: KLE Parser & Component Registry' (Protocol in workflow.md) (6f8228b)
 
-## Phase 3: Grid Placement Engine
+## Phase 3: Grid Placement Engine [checkpoint: 3198ed7]
 
 - [x] Task: Implement grid placement engine (`kbd_engine/placer.py`) (44b9557)
     - [x] Write tests for switch placement with default 19.05mm pitch on a 4-key row
