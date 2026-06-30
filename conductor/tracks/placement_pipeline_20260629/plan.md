@@ -85,7 +85,7 @@
 
 - [x] Task: Conductor - User Manual Verification 'Phase 4: DRC Validation Gate' (Protocol in workflow.md) (3f45fd0)
 
-## Phase 5: MCP Server & Integration
+## Phase 5: MCP Server & Integration [checkpoint: 4090f05]
 
 - [x] Task: Implement MCP server (`kbd_engine/mcp_server.py`) (fb1a053)
     - [x] Write tests for `place` tool endpoint (KLE JSON input → placement result)
