@@ -21,3 +21,6 @@ ENV/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Rust files
+target/
