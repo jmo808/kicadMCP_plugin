@@ -1,0 +1,7 @@
+Task: Implement KLE JSON parser (kbd_engine/kle_parser.py)
+
+Description: Implemented a robust state machine parser mapping standard Keyboard Layout Editor (KLE) JSON formatting into internal KeyMatrix models. Supports custom width/height/spacing options and absolute coordinate translation based on 19.05mm standard key pitch. Includes support for key rotations around custom centers. Added unit tests for various layouts, sizes, rotations, and error conditions.
+
+Modified Files:
+- kbd_engine/kle_parser.py
+- tests/test_kle_parser.py
