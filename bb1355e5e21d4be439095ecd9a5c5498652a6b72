@@ -1,0 +1,7 @@
+Task: Implement via insertion engine (kbd_engine/via_inserter.py)
+Summary of changes:
+- Created ViaInserter class scanning trace endpoints for layer changes.
+- Implemented centroid-based cluster merging of transition points within merge_tolerance (default 0.1mm) to reduce via count.
+- Added deduplication logic relative to pre-existing vias.
+- Wrote unit tests in tests/test_via_inserter.py covering basic via placement, single-layer no-via cases, cluster centroid calculation, and pre-existing via preservation.
+Why: Automates high-quality via generation at trace layer boundaries with minimal physical via density.
