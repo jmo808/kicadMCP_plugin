@@ -1,0 +1,7 @@
+Task: Scaffold Rust A* routing crate (kbd_router/)
+Summary of changes:
+- Initialized Rust library crate using cargo init.
+- Configured Cargo.toml with serde and pyo3 dependencies and features.
+- Defined Point, Obstacle, Net, RoutingRequest, TraceSegment, Via, and RouteResult data structures in src/lib.rs mirroring Python routing models.
+- Wrote Rust unit tests for data structure serialization and verified cargo test passes.
+Why: Scaffolds the Rust codebase and data models for the high-performance grid-based A* routing engine.
