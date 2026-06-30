@@ -1,0 +1,45 @@
+{
+  "classes": {
+    "MatrixRow": {
+      "track_width": 0.2,
+      "clearance": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3
+    },
+    "MatrixCol": {
+      "track_width": 0.2,
+      "clearance": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3
+    },
+    "Power": {
+      "track_width": 0.5,
+      "clearance": 0.25,
+      "via_diameter": 0.8,
+      "via_drill": 0.4
+    },
+    "USB": {
+      "track_width": 0.25,
+      "clearance": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3
+    },
+    "Signal": {
+      "track_width": 0.2,
+      "clearance": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3
+    }
+  },
+  "patterns": {
+    "ROW_.*": "MatrixRow",
+    "COL_.*": "MatrixCol",
+    "VCC.*": "Power",
+    "GND.*": "Power",
+    "\\+5V.*": "Power",
+    "3V3.*": "Power",
+    "USB_.*": "USB",
+    "D\\+": "USB",
+    "D\\-": "USB"
+  }
+}

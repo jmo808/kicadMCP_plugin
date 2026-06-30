@@ -86,11 +86,71 @@ class BOARD_DESIGN_SETTINGS:
         pass
 
 
+class NETCLASS:
+    def __init__(self, name: str) -> None:
+        self.name = name
+        self.clearance = 0
+        self.track_width = 0
+        self.via_dia = 0
+        self.via_drill = 0
+
+    def GetName(self) -> str:
+        return self.name
+
+    def SetClearance(self, val: int) -> None:
+        self.clearance = val
+
+    def GetClearance(self) -> int:
+        return self.clearance
+
+    def SetTrackWidth(self, val: int) -> None:
+        self.track_width = val
+
+    def GetTrackWidth(self) -> int:
+        return self.track_width
+
+    def SetViaDiameter(self, val: int) -> None:
+        self.via_dia = val
+
+    def GetViaDiameter(self) -> int:
+        return self.via_dia
+
+    def SetViaDrill(self, val: int) -> None:
+        self.via_drill = val
+
+    def GetViaDrill(self) -> int:
+        return self.via_drill
+
+
+class NETCLASSES:
+    def __init__(self) -> None:
+        self.classes = {}
+
+    def Add(self, netclass: NETCLASS) -> None:
+        self.classes[netclass.GetName()] = netclass
+
+    def Find(self, name: str) -> NETCLASS | None:
+        return self.classes.get(name)
+
+
+class NET_SETTINGS:
+    def __init__(self) -> None:
+        self.assignments = {}
+
+    def SetNetclass(self, net_name: str, class_name: str) -> None:
+        self.assignments[net_name] = class_name
+
+    def GetNetClassByName(self, net_name: str) -> str:
+        return self.assignments.get(net_name, "Default")
+
+
 class BOARD:
     def __init__(self) -> None:
         self.footprints = []
         self.tracks = []
         self.settings = BOARD_DESIGN_SETTINGS()
+        self.netclasses = NETCLASSES()
+        self.net_settings = NET_SETTINGS()
 
     def GetFootprints(self) -> list[FOOTPRINT]:
         return self.footprints
@@ -103,6 +163,12 @@ class BOARD:
 
     def GetDesignSettings(self) -> BOARD_DESIGN_SETTINGS:
         return self.settings
+
+    def GetNetClasses(self) -> NETCLASSES:
+        return self.netclasses
+
+    def GetNetSettings(self) -> NET_SETTINGS:
+        return self.net_settings
 
     def Save(self, filename: str) -> bool:
         return True

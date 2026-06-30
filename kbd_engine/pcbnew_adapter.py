@@ -101,3 +101,33 @@ class PcbnewAdapter:
                 }
             )
         return results
+
+    def create_net_class(
+        self,
+        name: str,
+        track_width: float,
+        clearance: float,
+        via_diameter: float,
+        via_drill: float,
+    ) -> None:
+        """Create a new net class with specified parameters.
+
+        All parameters are specified in mm.
+        """
+        netclass = pcbnew.NETCLASS(name)
+
+        netclass.SetTrackWidth(int(track_width * 1000000))
+        netclass.SetClearance(int(clearance * 1000000))
+        netclass.SetViaDiameter(int(via_diameter * 1000000))
+        netclass.SetViaDrill(int(via_drill * 1000000))
+
+        self.board.GetNetClasses().Add(netclass)
+
+    def set_net_class(self, net_name: str, class_name: str) -> None:
+        """Assign a net to a net class.
+
+        Args:
+            net_name: Name of the net to assign.
+            class_name: Name of the net class.
+        """
+        self.board.GetNetSettings().SetNetclass(net_name, class_name)
