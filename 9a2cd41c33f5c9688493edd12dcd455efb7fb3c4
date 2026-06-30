@@ -1,0 +1,8 @@
+Task: Implement MCP routing tool endpoints (kbd_engine/mcp_server.py)
+Summary of changes:
+- Implemented get_routers listing available routers and status.
+- Implemented set_net_classes saving configuration rules to config_path.
+- Implemented route running full routing pipeline (net class mapping, selected router execution, via insertion, board writing) and saving board.
+- Implemented route_preview returning detailed trace paths and via locations without board modification.
+- Wrote unit and integration tests in tests/test_mcp_server.py validating all endpoints, parameter parsing, mock-patched router responses, and error reporting.
+Why: Exposes the autorouting pipeline via FastMCP tools, allowing users/agents to route boards over the MCP interface.
