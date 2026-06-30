@@ -1,0 +1,7 @@
+Task: Verify 60-key matrix routes in <10 seconds via PyO3 (NFR-01)
+Summary of changes:
+- Appended test_router_60_key_matrix_performance to test_rust_astar_router.py.
+- Built a 60-key matrix netlist (5 rows, 12 columns, 77 nets total) on a 0.5mm grid spacing.
+- Measured execution duration using time.perf_counter().
+- Confirmed that routing completes in ~3.7 seconds (satisfying the <10 seconds NFR-01 limit).
+Why: Ensures high performance and speed of the A* routing engine for a fully sized keyboard layout.
