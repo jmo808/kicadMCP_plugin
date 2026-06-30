@@ -37,7 +37,7 @@
 
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Routing Foundation & Data Models' (Protocol in workflow.md) (f43ee64)
 
-## Phase 2: Rust A* Routing Engine
+## Phase 2: Rust A* Routing Engine [checkpoint: 6ef490e]
 
 - [x] Task: Scaffold Rust A* routing crate (`kbd_router/`) (7841ba6)
     - [x] Initialize Rust workspace with `cargo init --lib kbd_router`
@@ -86,7 +86,7 @@
     - [x] Verify all tests pass
     - [x] Verify 60-key matrix routes in <10 seconds via PyO3 (NFR-01) (be89c39)
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Rust A* Routing Engine' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Rust A* Routing Engine' (Protocol in workflow.md) (6ef490e)
 
 ## Phase 3: External Router Integrations
 
