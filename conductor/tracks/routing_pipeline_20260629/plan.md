@@ -26,14 +26,14 @@
     - [x] Implement IPC-2152 calculation functions
     - [x] Verify all tests pass
 
-- [ ] Task: Implement net class assignment engine (`kbd_engine/net_classes.py`)
-    - [ ] Write tests for default net class definitions (MatrixRow, MatrixCol, Power, USB, Signal)
-    - [ ] Write tests for assigning net classes to nets based on net name patterns
-    - [ ] Write tests for loading custom net class definitions from JSON
-    - [ ] Write tests for applying net classes to KiCad board via pcbnew adapter
-    - [ ] Implement `NetClassManager` with default definitions and JSON extension
-    - [ ] Create default net class config (`kbd_engine/data/default_net_classes.json`)
-    - [ ] Verify all tests pass
+- [x] Task: Implement net class assignment engine (`kbd_engine/net_classes.py`) (f4e4c15)
+    - [x] Write tests for default net class definitions (MatrixRow, MatrixCol, Power, USB, Signal)
+    - [x] Write tests for assigning net classes to nets based on net name patterns
+    - [x] Write tests for loading custom net class definitions from JSON
+    - [x] Write tests for applying net classes to KiCad board via pcbnew adapter
+    - [x] Implement `NetClassManager` with default definitions and JSON extension
+    - [x] Create default net class config (`kbd_engine/data/default_net_classes.json`)
+    - [x] Verify all tests pass
 
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Routing Foundation & Data Models' (Protocol in workflow.md)
 
