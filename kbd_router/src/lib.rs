@@ -1,5 +1,7 @@
 use serde::{Deserialize, Serialize};
 
+pub mod astar;
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub struct Point {
     pub x: i32,
