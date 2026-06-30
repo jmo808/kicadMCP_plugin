@@ -1,0 +1,6 @@
+Task: Define routing data models (kbd_engine/routing_models.py)
+Summary of changes:
+- Created NetClass, TraceSegment, Via, RoutingRequest, and RoutingResult frozen dataclasses to serve as the unified data boundary for routing requests and outputs.
+- Added comprehensive unit tests in tests/test_routing_models.py verifying defaults, type compatibility, and immutability.
+- Ensured compliance with style guide (mypy and ruff passing).
+Why: Defines the structured boundary for the multi-router dispatch interface and routing backends.
