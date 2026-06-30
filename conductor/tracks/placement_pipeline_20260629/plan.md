@@ -32,14 +32,14 @@
 
 ## Phase 2: KLE Parser & Component Registry
 
-- [~] Task: Implement KLE JSON parser (`kbd_engine/kle_parser.py`)
-    - [ ] Write tests for parsing a minimal 4-key KLE JSON into KeyMatrix
-    - [ ] Write tests for parsing key sizes (1u, 1.25u, 1.5u, 2u, 6.25u)
-    - [ ] Write tests for parsing key rotation angles
-    - [ ] Write tests for error handling on malformed KLE JSON
-    - [ ] Implement `parse_kle_json()` function mapping KLE format to `KeyMatrix`
-    - [ ] Write tests for a full 60% layout KLE JSON
-    - [ ] Verify all tests pass
+- [x] Task: Implement KLE JSON parser (`kbd_engine/kle_parser.py`) (c4fa381)
+    - [x] Write tests for parsing a minimal 4-key KLE JSON into KeyMatrix
+    - [x] Write tests for parsing key sizes (1u, 1.25u, 1.5u, 2u, 6.25u)
+    - [x] Write tests for parsing key rotation angles
+    - [x] Write tests for error handling on malformed KLE JSON
+    - [x] Implement `parse_kle_json()` function mapping KLE format to `KeyMatrix`
+    - [x] Write tests for a full 60% layout KLE JSON
+    - [x] Verify all tests pass
 
 - [ ] Task: Implement component abstraction registry (`kbd_engine/registry.py`)
     - [ ] Write tests for default footprint resolution (MX switch, SOD-123 diode, 0805 capacitor)
