@@ -1,6 +1,6 @@
 # Implementation Plan: Build Core Keyboard-to-PCB Placement Pipeline with MCP Server
 
-## Phase 1: Project Scaffolding & Foundation
+## Phase 1: Project Scaffolding & Foundation [checkpoint: 0d148ca]
 
 - [x] Task: Initialize Python package structure and development environment (89906de)
     - [x] Create `kbd_engine/` package with `__init__.py`
