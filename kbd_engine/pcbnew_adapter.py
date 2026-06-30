@@ -131,3 +131,64 @@ class PcbnewAdapter:
             class_name: Name of the net class.
         """
         self.board.GetNetSettings().SetNetclass(net_name, class_name)
+
+    def find_footprint_by_reference(self, ref: str) -> Any:
+        """Find a footprint by its reference designator.
+
+        Args:
+            ref: Reference designator (e.g. SW_0_0)
+
+        Returns:
+            The footprint object, or None if not found.
+        """
+        if hasattr(self.board, "FindFootprintByReference"):
+            return self.board.FindFootprintByReference(ref)
+        return None
+
+    def get_pad_position(self, footprint_ref: str, pad_name: str) -> tuple[float, float] | None:
+        """Get the absolute coordinates of a pad on the board in mm.
+
+        Args:
+            footprint_ref: Reference designator of the footprint.
+            pad_name: Name/number of the pad.
+
+        Returns:
+            A tuple of (x, y) coordinates in mm, or None if not found.
+        """
+        fp = self.find_footprint_by_reference(footprint_ref)
+        if fp is None:
+            return None
+
+        pad = None
+        if hasattr(fp, "FindPadByNumber"):
+            pad = fp.FindPadByNumber(pad_name)
+        elif hasattr(fp, "FindPad"):
+            pad = fp.FindPad(pad_name)
+
+        if pad is None:
+            return None
+
+        pos = pad.GetPosition()
+        return (pos.GetX() / 1000000.0, pos.GetY() / 1000000.0)
+
+    def add_via(
+        self,
+        x: float,
+        y: float,
+        drill: float,
+        diameter: float,
+    ) -> Any:
+        """Add a via at specified coordinates with given drill and diameter.
+
+        All parameters are specified in mm.
+        """
+        via = pcbnew.VIA(self.board)
+        iu_x = int(x * 1000000)
+        iu_y = int(y * 1000000)
+        via.SetStart(pcbnew.VECTOR2I(iu_x, iu_y))
+        via.SetEnd(pcbnew.VECTOR2I(iu_x, iu_y))
+        via.SetDrill(int(drill * 1000000))
+        via.SetWidth(int(diameter * 1000000))
+        self.board.Add(via)
+        return via
+

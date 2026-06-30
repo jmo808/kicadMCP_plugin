@@ -26,8 +26,22 @@ DEGREES_T = 1
 
 
 class PAD:
-    def __init__(self, name: str = "") -> None:
+    def __init__(self, name: str = "", offset: VECTOR2I = None, footprint: "FOOTPRINT" = None) -> None:
         self.name = name
+        self.offset = offset if offset is not None else VECTOR2I(0, 0)
+        self.footprint = footprint
+
+    def GetPosition(self) -> VECTOR2I:
+        if self.footprint is None:
+            return self.offset
+        import math
+        rad = math.radians(self.footprint.GetOrientation().AsDegrees())
+        ox = self.offset.x
+        oy = self.offset.y
+        rx = ox * math.cos(rad) - oy * math.sin(rad)
+        ry = ox * math.sin(rad) + oy * math.cos(rad)
+        fp_pos = self.footprint.GetPosition()
+        return VECTOR2I(int(fp_pos.x + rx), int(fp_pos.y + ry))
 
 
 class FOOTPRINT:
@@ -46,6 +60,17 @@ class FOOTPRINT:
 
     def SetReference(self, ref: str) -> None:
         self.reference = ref
+        # Populate pads based on footprint reference type
+        self.pads = []
+        if ref.startswith("SW_") or ref.startswith("SW"):
+            self.pads.append(PAD("1", VECTOR2I(-2500000, -2500000), self))
+            self.pads.append(PAD("2", VECTOR2I(2500000, 2500000), self))
+        elif ref.startswith("D_") or ref.startswith("D"):
+            self.pads.append(PAD("1", VECTOR2I(-1500000, 0), self))
+            self.pads.append(PAD("2", VECTOR2I(1500000, 0), self))
+        elif ref.startswith("C_") or ref.startswith("C"):
+            self.pads.append(PAD("1", VECTOR2I(-1500000, 0), self))
+            self.pads.append(PAD("2", VECTOR2I(1500000, 0), self))
 
     def GetReference(self) -> str:
         return self.reference
@@ -58,6 +83,15 @@ class FOOTPRINT:
 
     def GetPads(self) -> list[PAD]:
         return self.pads
+
+    def FindPad(self, name: str) -> PAD | None:
+        for pad in self.pads:
+            if pad.name == name:
+                return pad
+        return None
+
+    def FindPadByNumber(self, name: str) -> PAD | None:
+        return self.FindPad(name)
 
 
 class TRACK:
@@ -79,6 +113,19 @@ class TRACK:
 
     def SetWidth(self, width: int) -> None:
         self.width = width
+
+
+class VIA(TRACK):
+    def __init__(self, board: "BOARD" = None) -> None:
+        super().__init__(board)
+        self.drill = 0
+        self.diameter = 0
+
+    def SetDrill(self, drill: int) -> None:
+        self.drill = drill
+
+    def SetWidth(self, width: int) -> None:
+        self.diameter = width
 
 
 class BOARD_DESIGN_SETTINGS:
@@ -144,6 +191,9 @@ class NET_SETTINGS:
         return self.assignments.get(net_name, "Default")
 
 
+_saved_boards: dict[str, "BOARD"] = {}
+
+
 class BOARD:
     def __init__(self) -> None:
         self.footprints = []
@@ -171,7 +221,14 @@ class BOARD:
         return self.net_settings
 
     def Save(self, filename: str) -> bool:
+        _saved_boards[filename] = self
         return True
+
+    def FindFootprintByReference(self, ref: str) -> FOOTPRINT | None:
+        for fp in self.footprints:
+            if fp.GetReference() == ref:
+                return fp
+        return None
 
 
 def GetBoard() -> BOARD:
@@ -179,7 +236,7 @@ def GetBoard() -> BOARD:
 
 
 def LoadBoard(filename: str) -> BOARD:
-    return BOARD()
+    return _saved_boards.get(filename, BOARD())
 
 
 def FootprintLoad(library_path: str, footprint_name: str) -> FOOTPRINT:
