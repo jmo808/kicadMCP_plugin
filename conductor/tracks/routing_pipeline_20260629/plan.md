@@ -70,12 +70,12 @@
     - [x] Write Python tests verifying identical output between PyO3 and subprocess modes
     - [x] Verify all tests pass
 
-- [ ] Task: Build REST API wrapper (`kbd_router/src/bin/server.rs`)
-    - [ ] Add `axum` or `actix-web` dependency for HTTP server
-    - [ ] Write Rust integration test for POST `/route` endpoint
-    - [ ] Write Python tests calling REST API and verifying JSON response matches PyO3 output
-    - [ ] Implement lightweight HTTP server with `/route` POST endpoint
-    - [ ] Verify all tests pass
+- [x] Task: Build REST API wrapper (`kbd_router/src/bin/server.rs`) (24499b0)
+    - [x] Add `axum` or `actix-web` dependency for HTTP server
+    - [x] Write Rust integration test for POST `/route` endpoint
+    - [x] Write Python tests calling REST API and verifying JSON response matches PyO3 output
+    - [x] Implement lightweight HTTP server with `/route` POST endpoint
+    - [x] Verify all tests pass
 
 - [ ] Task: Implement Python adapter for Rust A* router (`kbd_engine/routers/rust_astar.py`)
     - [ ] Write tests for PyO3 mode routing a 60-key matrix
