@@ -30,7 +30,7 @@
 
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Project Scaffolding & Foundation' (Protocol in workflow.md) (0d148ca)
 
-## Phase 2: KLE Parser & Component Registry
+## Phase 2: KLE Parser & Component Registry [checkpoint: 6f8228b]
 
 - [x] Task: Implement KLE JSON parser (`kbd_engine/kle_parser.py`) (c4fa381)
     - [x] Write tests for parsing a minimal 4-key KLE JSON into KeyMatrix
