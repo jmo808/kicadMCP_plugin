@@ -1,0 +1,7 @@
+Task: Integrate placement with pcbnew adapter (kbd_engine/placer.py)
+
+Description: Implemented apply_placement() function which takes a PlacementResult and writes the actual footprint instances onto a KiCad board via the mockable PcbnewAdapter. Added footprint library/name parsing from registry values (Library_Name:Footprint_Name format) and dry-run support. Wrote integration tests confirming correct footprint addition on mock board and validation of footprint formats.
+
+Modified Files:
+- kbd_engine/placer.py
+- tests/test_placer_integration.py
