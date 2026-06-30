@@ -18,13 +18,13 @@
     - [x] Implement `Router` ABC and `RouterDispatch` class
     - [x] Verify all tests pass
 
-- [ ] Task: Implement IPC-2152 track width calculator (`kbd_engine/ipc2152.py`)
-    - [ ] Write tests for track width calculation at 0.1A, 0.5A, 1A, and 3A with 1oz copper
-    - [ ] Write tests for different copper weights (0.5oz, 1oz, 2oz)
-    - [ ] Write tests for configurable temperature rise (10°C, 20°C)
-    - [ ] Write tests for edge cases (zero current, negative values raise errors)
-    - [ ] Implement IPC-2152 calculation functions
-    - [ ] Verify all tests pass
+- [x] Task: Implement IPC-2152 track width calculator (`kbd_engine/ipc2152.py`) (988b3fb)
+    - [x] Write tests for track width calculation at 0.1A, 0.5A, 1A, and 3A with 1oz copper
+    - [x] Write tests for different copper weights (0.5oz, 1oz, 2oz)
+    - [x] Write tests for configurable temperature rise (10°C, 20°C)
+    - [x] Write tests for edge cases (zero current, negative values raise errors)
+    - [x] Implement IPC-2152 calculation functions
+    - [x] Verify all tests pass
 
 - [ ] Task: Implement net class assignment engine (`kbd_engine/net_classes.py`)
     - [ ] Write tests for default net class definitions (MatrixRow, MatrixCol, Power, USB, Signal)
