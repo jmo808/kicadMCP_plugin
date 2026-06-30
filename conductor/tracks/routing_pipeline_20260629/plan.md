@@ -10,13 +10,13 @@
     - [x] Implement all routing data models with type hints and frozen dataclasses
     - [x] Verify all tests pass
 
-- [ ] Task: Define Router protocol and dispatch interface (`kbd_engine/router.py`)
-    - [ ] Write tests for `Router` ABC with `route(request) → RoutingResult` contract
-    - [ ] Write tests for `RouterDispatch` selecting router by name (`rust_astar`, `quilter`, `freerouting`)
-    - [ ] Write tests for error handling when unknown router name is requested
-    - [ ] Write tests for structured error responses with unrouted nets and constraint violations
-    - [ ] Implement `Router` ABC and `RouterDispatch` class
-    - [ ] Verify all tests pass
+- [x] Task: Define Router protocol and dispatch interface (`kbd_engine/router.py`) (12a7a43)
+    - [x] Write tests for `Router` ABC with `route(request) → RoutingResult` contract
+    - [x] Write tests for `RouterDispatch` selecting router by name (`rust_astar`, `quilter`, `freerouting`)
+    - [x] Write tests for error handling when unknown router name is requested
+    - [x] Write tests for structured error responses with unrouted nets and constraint violations
+    - [x] Implement `Router` ABC and `RouterDispatch` class
+    - [x] Verify all tests pass
 
 - [ ] Task: Implement IPC-2152 track width calculator (`kbd_engine/ipc2152.py`)
     - [ ] Write tests for track width calculation at 0.1A, 0.5A, 1A, and 3A with 1oz copper
