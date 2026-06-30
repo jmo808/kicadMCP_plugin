@@ -74,14 +74,14 @@
 
 ## Phase 4: DRC Validation Gate
 
-- [~] Task: Implement DRC validation gate (`kbd_engine/drc.py`)
-    - [ ] Write tests for DRC pass on valid placement (no violations)
-    - [ ] Write tests for DRC failure detecting courtyard clearance violations
-    - [ ] Write tests for DRC failure detecting overlapping footprints
-    - [ ] Write tests for actionable error messages (component ref, coordinates, violated rule)
-    - [ ] Implement `DrcValidator` class wrapping pcbnew DRC via adapter
-    - [ ] Implement coordinate-based clearance check for dry-run mode (no board write)
-    - [ ] Verify all tests pass
+- [x] Task: Implement DRC validation gate (`kbd_engine/drc.py`) (08951e7)
+    - [x] Write tests for DRC pass on valid placement (no violations)
+    - [x] Write tests for DRC failure detecting courtyard clearance violations
+    - [x] Write tests for DRC failure detecting overlapping footprints
+    - [x] Write tests for actionable error messages (component ref, coordinates, violated rule)
+    - [x] Implement `DrcValidator` class wrapping pcbnew DRC via adapter
+    - [x] Implement coordinate-based clearance check for dry-run mode (no board write)
+    - [x] Verify all tests pass
 
 - [ ] Task: Conductor - User Manual Verification 'Phase 4: DRC Validation Gate' (Protocol in workflow.md)
 
