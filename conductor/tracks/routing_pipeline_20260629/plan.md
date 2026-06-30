@@ -1,6 +1,6 @@
 # Implementation Plan: Automated Trace Routing Pipeline with Multi-Router Dispatch
 
-## Phase 1: Routing Foundation & Data Models
+## Phase 1: Routing Foundation & Data Models [checkpoint: f43ee64]
 
 - [x] Task: Define routing data models (`kbd_engine/routing_models.py`) (e972594)
     - [x] Write tests for `RoutingRequest` dataclass (board geometry, netlist, constraints, router selection)
@@ -35,7 +35,7 @@
     - [x] Create default net class config (`kbd_engine/data/default_net_classes.json`)
     - [x] Verify all tests pass
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Routing Foundation & Data Models' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Routing Foundation & Data Models' (Protocol in workflow.md) (f43ee64)
 
 ## Phase 2: Rust A* Routing Engine
 
