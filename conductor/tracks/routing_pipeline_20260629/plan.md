@@ -131,15 +131,15 @@
 
 ## Phase 5: MCP Endpoints & End-to-End Integration
 
-- [ ] Task: Implement MCP routing tool endpoints
-    - [ ] Write tests for `route` endpoint (placed board + router selection → routed board)
-    - [ ] Write tests for `route` endpoint with `dry_run=True` returning JSON preview
-    - [ ] Write tests for `route_preview` endpoint returning trace paths and via locations
-    - [ ] Write tests for `get_routers` endpoint listing available backends and status
-    - [ ] Write tests for `set_net_classes` endpoint configuring net class rules
-    - [ ] Write tests for error responses on routing failures (structured JSON with diagnostics)
-    - [ ] Implement all MCP routing endpoints in `kbd_engine/mcp_server.py`
-    - [ ] Verify all tests pass
+- [x] Task: Implement MCP routing tool endpoints (9a2cd41)
+    - [x] Write tests for `route` endpoint (placed board + router selection → routed board)
+    - [x] Write tests for `route` endpoint with `dry_run=True` returning JSON preview
+    - [x] Write tests for `route_preview` endpoint returning trace paths and via locations
+    - [x] Write tests for `get_routers` endpoint listing available backends and status
+    - [x] Write tests for `set_net_classes` endpoint configuring net class rules
+    - [x] Write tests for error responses on routing failures (structured JSON with diagnostics)
+    - [x] Implement all MCP routing endpoints in `kbd_engine/mcp_server.py`
+    - [x] Verify all tests pass
 
 - [ ] Task: End-to-end integration tests
     - [ ] Write integration test: KLE JSON → parse → place → route (Rust A*) → DRC validate
