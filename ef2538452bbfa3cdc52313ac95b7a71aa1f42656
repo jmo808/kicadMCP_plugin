@@ -1,0 +1,6 @@
+Task: Build subprocess + JSON I/O CLI (kbd_router/src/bin/cli.rs)
+Summary of changes:
+- Created cli.rs reading RoutingRequest JSON from stdin and writing RouteResult JSON to stdout.
+- Configured kbd-router-cli binary target in Cargo.toml.
+- Added Python subprocess unit test in tests/test_rust_router.py compiling binary via cargo build, executing subprocess, piping input, and verifying correct output.
+Why: Exposes the Rust routing engine to a subprocess interface, supporting non-PyO3 integrations and decoupling the execution environment.
