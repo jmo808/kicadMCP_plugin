@@ -1,0 +1,7 @@
+Phase: Phase 1: Routing Foundation & Data Models
+Automated Test Command: pytest
+Manual Verification Steps:
+1. Ensure the virtual environment is active.
+2. Execute the verification script: python /home/jules/.gemini/antigravity/brain/19f79ac7-c466-49c6-8ea7-cf71f30a02cb/scratch/verify_routing_phase1.py
+3. Verify IPC-2152 calculations, net-to-class matching, and mock board application.
+User Confirmation: yes
