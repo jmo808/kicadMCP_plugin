@@ -1,0 +1,7 @@
+Task: Implement MCP server (kbd_engine/mcp_server.py)
+
+Description: Implemented FastMCP server registering tools for previewing layouts, placing layouts directly onto a board, and executing coordinate-based DRC checks. All tool endpoints return structured JSON response payloads containing status messages, placement details, and validation error listings. Wrote unit tests exercising all tool logic inside the pytest runner.
+
+Modified Files:
+- kbd_engine/mcp_server.py
+- tests/test_mcp_server.py
