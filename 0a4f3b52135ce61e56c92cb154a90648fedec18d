@@ -1,0 +1,7 @@
+Task: Implement FreeRouting integration (kbd_engine/routers/freerouting.py)
+Summary of changes:
+- Created FreeRoutingRouter class implementing Router protocol.
+- Implemented export_dsn logic to serialize board geometry, components placement, library footprint pads, and net network into Specctra DSN S-expression format.
+- Implemented parse_sexpr S-expression parser and parse_ses log/session parser mapping traces and vias back to internal routing models.
+- Wrote tests in tests/test_freerouting.py validating DSN/SES serialization, subprocess runner execution, timeout constraints, missing binary exceptions, and successful track/via loading.
+Why: Seamlessly delegates routing computation to FreeRouting CLI runner, enabling high-quality external auto-routing option.
