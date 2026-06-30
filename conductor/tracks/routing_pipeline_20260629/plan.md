@@ -129,7 +129,7 @@
 
 - [x] Task: Conductor - User Manual Verification 'Phase 4: Via Insertion & Board Writing' (Protocol in workflow.md) (3064ece)
 
-## Phase 5: MCP Endpoints & End-to-End Integration
+## Phase 5: MCP Endpoints & End-to-End Integration [checkpoint: 7fcdee4]
 
 - [x] Task: Implement MCP routing tool endpoints (9a2cd41)
     - [x] Write tests for `route` endpoint (placed board + router selection → routed board)
@@ -152,4 +152,4 @@
     - [x] Run `mypy kbd_engine/` and verify zero errors
     - [x] Run `cargo test` on `kbd_router/` and verify all Rust tests pass
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 5: MCP Endpoints & End-to-End Integration' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 5: MCP Endpoints & End-to-End Integration' (Protocol in workflow.md) (7fcdee4)
