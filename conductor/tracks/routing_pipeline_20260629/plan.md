@@ -39,12 +39,12 @@
 
 ## Phase 2: Rust A* Routing Engine
 
-- [ ] Task: Scaffold Rust A* routing crate (`kbd_router/`)
-    - [ ] Initialize Rust workspace with `cargo init --lib kbd_router`
-    - [ ] Add dependencies: `serde`, `serde_json`, `pyo3` (optional feature)
-    - [ ] Define Rust data structures mirroring Python routing models (Grid, Net, Obstacle, RouteResult)
-    - [ ] Write Rust unit tests for data structure serialization/deserialization
-    - [ ] Verify `cargo test` passes
+- [x] Task: Scaffold Rust A* routing crate (`kbd_router/`) (7841ba6)
+    - [x] Initialize Rust workspace with `cargo init --lib kbd_router`
+    - [x] Add dependencies: `serde`, `serde_json`, `pyo3` (optional feature)
+    - [x] Define Rust data structures mirroring Python routing models (Grid, Net, Obstacle, RouteResult)
+    - [x] Write Rust unit tests for data structure serialization/deserialization
+    - [x] Verify `cargo test` passes
 
 - [ ] Task: Implement A* pathfinding core in Rust (`kbd_router/src/astar.rs`)
     - [ ] Write Rust tests for A* routing a single 2-point net on an empty grid
