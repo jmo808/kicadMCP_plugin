@@ -111,13 +111,13 @@
 
 ## Phase 4: Via Insertion & Board Writing
 
-- [ ] Task: Implement via insertion engine (`kbd_engine/via_inserter.py`)
-    - [ ] Write tests for via insertion at layer transition points in routing result
-    - [ ] Write tests for configurable via parameters (drill diameter, annular ring, via type)
-    - [ ] Write tests for via DRC compliance (clearance to pads, tracks, board edge)
-    - [ ] Write tests for via count minimization (merge nearby transition points)
-    - [ ] Implement `ViaInserter` class processing RoutingResult and inserting optimal vias
-    - [ ] Verify all tests pass
+- [x] Task: Implement via insertion engine (`kbd_engine/via_inserter.py`) (bb1355e)
+    - [x] Write tests for via insertion at layer transition points in routing result
+    - [x] Write tests for configurable via parameters (drill diameter, annular ring, via type)
+    - [x] Write tests for via DRC compliance (clearance to pads, tracks, board edge)
+    - [x] Write tests for via count minimization (merge nearby transition points)
+    - [x] Implement `ViaInserter` class processing RoutingResult and inserting optimal vias
+    - [x] Verify all tests pass
 
 - [ ] Task: Integrate routing results with pcbnew adapter
     - [ ] Write tests for `apply_routing()` writing TraceSegments and Vias to board via adapter
