@@ -1,0 +1,7 @@
+Task: Fix DRC clearance validation between components of the same key (kbd_engine/drc.py)
+
+Description: Updated the coordinate-based clearance validation to skip checking clearances between components belonging to the same logical key suffix (e.g. SW_0_0 and D_0_0). This prevents false collision detection between a switch and its associated relative diode or capacitor. Adjusted tests to reflect this logic.
+
+Modified Files:
+- kbd_engine/drc.py
+- tests/test_drc.py
