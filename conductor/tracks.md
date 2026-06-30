@@ -4,7 +4,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [~] **Track: Build core keyboard-to-PCB placement pipeline with MCP server**
+- [x] **Track: Build core keyboard-to-PCB placement pipeline with MCP server**
   *Link: [./tracks/placement_pipeline_20260629/](./tracks/placement_pipeline_20260629/)*
 ---
 
