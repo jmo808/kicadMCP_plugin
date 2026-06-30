@@ -1,0 +1,6 @@
+Task: Implement IPC-2152 track width calculator (kbd_engine/ipc2152.py)
+Summary of changes:
+- Implemented calculate_trace_width function mapping current, temp rise, and copper weight to required width in mm using IPC-2152 Still Air curve-fit coefficients.
+- Created oz_to_mil helper function.
+- Added unit tests in tests/test_ipc2152.py testing standard external/internal cases and negative/zero value edge case handling.
+Why: Provides the mathematical foundation to compute minimum trace widths required for DRC compliance and temperature limits.
