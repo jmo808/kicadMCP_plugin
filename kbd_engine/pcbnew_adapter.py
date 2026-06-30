@@ -228,3 +228,42 @@ class PcbnewAdapter:
         return pads
 
 
+def apply_routing(result: Any, adapter: "PcbnewAdapter", dry_run: bool = False) -> Any:
+    """Apply traces and vias from RoutingResult to the PCB board.
+
+    If dry_run is True, the board is not modified and we return a RoutingResult.
+    Otherwise, tracks and vias are added to the board.
+    """
+    if dry_run:
+        return result
+
+    for trace in result.traces:
+        adapter.add_track(
+            start_x=trace.start[0],
+            start_y=trace.start[1],
+            end_x=trace.end[0],
+            end_y=trace.end[1],
+            layer=trace.layer,
+            width=trace.width,
+        )
+    for via in result.vias:
+        adapter.add_via(
+            x=via.position[0],
+            y=via.position[1],
+            drill=via.drill,
+            diameter=via.diameter,
+        )
+    return result
+
+
+def apply_net_classes(net_class_manager: Any, adapter: "PcbnewAdapter") -> None:
+    """Apply net classes configuration to the PCB board.
+
+    Maps all existing nets on the board to their matching classes.
+    """
+    board_nets = adapter.board.GetNetsByName()
+    net_names = list(board_nets.keys())
+    net_class_manager.apply_to_board(adapter, net_names)
+
+
+

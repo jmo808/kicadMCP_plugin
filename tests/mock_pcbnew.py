@@ -1,4 +1,4 @@
-# Mock implementation of pcbnew for unit testing without KiCad installed.
+from typing import Any
 
 
 class VECTOR2I:
@@ -30,6 +30,13 @@ class PAD:
         self.name = name
         self.offset = offset if offset is not None else VECTOR2I(0, 0)
         self.footprint = footprint
+        self.netname = ""
+
+    def GetNetname(self) -> str:
+        return self.netname
+
+    def SetNetname(self, netname: str) -> None:
+        self.netname = netname
 
     def GetPosition(self) -> VECTOR2I:
         if self.footprint is None:
@@ -204,6 +211,17 @@ class BOARD:
 
     def GetFootprints(self) -> list[FOOTPRINT]:
         return self.footprints
+
+    def GetNetsByName(self) -> dict[str, Any]:
+        from unittest.mock import MagicMock
+        nets = {}
+        for fp in self.footprints:
+            pads = fp.GetPads() if hasattr(fp, "GetPads") else fp.Pads()
+            for pad in pads:
+                netname = pad.GetNetname()
+                if netname:
+                    nets[netname] = MagicMock()
+        return nets
 
     def Add(self, item: FOOTPRINT | TRACK) -> None:
         if isinstance(item, FOOTPRINT):

@@ -65,3 +65,56 @@ def test_net_class_methods() -> None:
 
     adapter.set_net_class("VCC", "Power")
     assert adapter.board.GetNetSettings().assignments["VCC"] == "Power"
+
+
+def test_apply_routing() -> None:
+    from kbd_engine.pcbnew_adapter import apply_routing
+    from kbd_engine.routing_models import RoutingResult, TraceSegment, Via
+
+    adapter = PcbnewAdapter()
+    result = RoutingResult(
+        traces=[TraceSegment(start=(0.0, 0.0), end=(10.0, 10.0), layer="F.Cu", width=0.25)],
+        vias=[Via(position=(10.0, 10.0), drill=0.3, diameter=0.6, layers=("F.Cu", "B.Cu"))],
+        success=True,
+    )
+
+    # 1. Dry run mode: board is not modified
+    dry_result = apply_routing(result, adapter, dry_run=True)
+    assert dry_result == result
+    assert len(adapter.board.tracks) == 0
+
+    # 2. Normal mode: board is modified
+    normal_result = apply_routing(result, adapter, dry_run=False)
+    assert normal_result == result
+    assert len(adapter.board.tracks) == 2  # 1 track + 1 via (since via inherits from track)
+
+
+def test_apply_net_classes() -> None:
+    from kbd_engine.net_classes import NetClassManager
+    from kbd_engine.pcbnew_adapter import apply_net_classes
+
+    adapter = PcbnewAdapter()
+    # Add a footprint with pads to generate nets on mock board
+    fp = adapter.add_footprint(
+        library_path="kbd_custom",
+        footprint_name="SW_Cherry_MX",
+        reference="SW_0_0",
+        x=10.0,
+        y=10.0,
+        rotation=0.0,
+    )
+    # Set net names on footprint pads
+    pads = fp.GetPads() if hasattr(fp, "GetPads") else fp.Pads()
+    pads[0].SetNetname("ROW_0")
+    pads[1].SetNetname("COL_0")
+
+    # Create manager with default rules
+    manager = NetClassManager()
+
+    apply_net_classes(manager, adapter)
+
+    # Verify assignments
+    assignments = adapter.board.GetNetSettings().assignments
+    assert assignments.get("ROW_0") == "MatrixRow"
+    assert assignments.get("COL_0") == "MatrixCol"
+
