@@ -141,15 +141,15 @@
     - [x] Implement all MCP routing endpoints in `kbd_engine/mcp_server.py`
     - [x] Verify all tests pass
 
-- [ ] Task: End-to-end integration tests
-    - [ ] Write integration test: KLE JSON → parse → place → route (Rust A*) → DRC validate
-    - [ ] Write integration test: MCP `route` with each backend (Rust A*, FreeRouting mock, Quilter mock)
-    - [ ] Write integration test: MCP `route` with `dry_run=True` returns valid preview JSON
-    - [ ] Write integration test: Full pipeline with net class assignment and via insertion
-    - [ ] Write integration test: Routing failure returns actionable error with unrouted net details
-    - [ ] Run `pytest --cov=kbd_engine --cov-report=html` and verify >80% coverage
-    - [ ] Run `ruff check kbd_engine/ tests/` and verify zero errors
-    - [ ] Run `mypy kbd_engine/` and verify zero errors
-    - [ ] Run `cargo test` on `kbd_router/` and verify all Rust tests pass
+- [x] Task: End-to-end integration tests (a183d5c)
+    - [x] Write integration test: KLE JSON → parse → place → route (Rust A*) → DRC validate
+    - [x] Write integration test: MCP `route` with each backend (Rust A*, FreeRouting mock, Quilter mock)
+    - [x] Write integration test: MCP `route` with `dry_run=True` returns valid preview JSON
+    - [x] Write integration test: Full pipeline with net class assignment and via insertion
+    - [x] Write integration test: Routing failure returns actionable error with unrouted net details
+    - [x] Run `pytest --cov=kbd_engine --cov-report=html` and verify >80% coverage
+    - [x] Run `ruff check kbd_engine/ tests/` and verify zero errors
+    - [x] Run `mypy kbd_engine/` and verify zero errors
+    - [x] Run `cargo test` on `kbd_router/` and verify all Rust tests pass
 
 - [ ] Task: Conductor - User Manual Verification 'Phase 5: MCP Endpoints & End-to-End Integration' (Protocol in workflow.md)
