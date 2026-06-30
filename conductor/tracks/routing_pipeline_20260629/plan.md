@@ -88,7 +88,7 @@
 
 - [x] Task: Conductor - User Manual Verification 'Phase 2: Rust A* Routing Engine' (Protocol in workflow.md) (6ef490e)
 
-## Phase 3: External Router Integrations
+## Phase 3: External Router Integrations [checkpoint: 1396af6]
 
 - [x] Task: Implement FreeRouting integration (`kbd_engine/routers/freerouting.py`) (0a4f3b5)
     - [x] Write tests for DSN export from placed board (Specctra Design format)
@@ -107,7 +107,7 @@
     - [x] Implement `QuilterRouter(Router)` with REST client, auth, and result mapping
     - [x] Verify all tests pass with mocked HTTP responses
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: External Router Integrations' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 3: External Router Integrations' (Protocol in workflow.md) (1396af6)
 
 ## Phase 4: Via Insertion & Board Writing
 
