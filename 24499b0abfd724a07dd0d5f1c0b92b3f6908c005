@@ -1,0 +1,8 @@
+Task: Build REST API wrapper (kbd_router/src/bin/server.rs)
+Summary of changes:
+- Created server.rs implementing axum HTTP server with POST /route endpoint.
+- Configured kbd-router-server binary target in Cargo.toml.
+- Added Cargo dependencies for axum, tokio (full features), and tower.
+- Wrote Rust HTTP endpoint integration test using tower::ServiceExt (oneshot).
+- Wrote Python HTTP server integration test in tests/test_rust_router.py spawning HTTP server, performing POST requests, and verifying output.
+Why: Exposes the Rust routing engine via REST API, supporting remote execution and decoupling language runtimes.
