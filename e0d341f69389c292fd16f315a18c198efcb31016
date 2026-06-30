@@ -1,0 +1,4 @@
+Task: Add test coverage for new PcbnewAdapter netclass methods (tests/test_pcbnew_adapter.py)
+Summary of changes:
+- Wrote test_net_class_methods verifying create_net_class and set_net_class on PcbnewAdapter.
+Why: Ensures that the newly added adapter methods are validated by unit tests.
