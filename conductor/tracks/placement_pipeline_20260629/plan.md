@@ -72,7 +72,7 @@
 
 - [x] Task: Conductor - User Manual Verification 'Phase 3: Grid Placement Engine' (Protocol in workflow.md) (3198ed7)
 
-## Phase 4: DRC Validation Gate
+## Phase 4: DRC Validation Gate [checkpoint: 3f45fd0]
 
 - [x] Task: Implement DRC validation gate (`kbd_engine/drc.py`) (08951e7)
     - [x] Write tests for DRC pass on valid placement (no violations)
