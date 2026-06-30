@@ -54,15 +54,15 @@
 
 ## Phase 3: Grid Placement Engine
 
-- [~] Task: Implement grid placement engine (`kbd_engine/placer.py`)
-    - [ ] Write tests for switch placement with default 19.05mm pitch on a 4-key row
-    - [ ] Write tests for diode placement with configurable Y-offset below each switch
-    - [ ] Write tests for capacitor placement adjacent to switches
-    - [ ] Write tests for staggered row offsets (standard QWERTY stagger pattern)
-    - [ ] Write tests for ortholinear grid placement (zero stagger)
-    - [ ] Implement `GridPlacer` class with `place(key_matrix, registry) → PlacementResult`
-    - [ ] Verify placement completes in <5 seconds for 60-key layout (NFR-01)
-    - [ ] Verify all tests pass
+- [x] Task: Implement grid placement engine (`kbd_engine/placer.py`) (44b9557)
+    - [x] Write tests for switch placement with default 19.05mm pitch on a 4-key row
+    - [x] Write tests for diode placement with configurable Y-offset below each switch
+    - [x] Write tests for capacitor placement adjacent to switches
+    - [x] Write tests for staggered row offsets (standard QWERTY stagger pattern)
+    - [x] Write tests for ortholinear grid placement (zero stagger)
+    - [x] Implement `GridPlacer` class with `place(key_matrix, registry) → PlacementResult`
+    - [x] Verify placement completes in <5 seconds for 60-key layout (NFR-01)
+    - [x] Verify all tests pass
 
 - [ ] Task: Integrate placement with pcbnew adapter
     - [ ] Write tests for `apply_placement()` writing PlacementResult to a board via adapter
