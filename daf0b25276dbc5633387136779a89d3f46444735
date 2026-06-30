@@ -1,0 +1,8 @@
+Task: Implement Python adapter for Rust A* router (kbd_engine/routers/rust_astar.py)
+Summary of changes:
+- Created RustAstarRouter subclass of Router wrapping all three integration modes: PyO3, subprocess, and REST.
+- Implemented mode auto-detection and fallback hierarchy (PyO3 -> subprocess -> REST).
+- Updated PcbnewAdapter with find_footprint_by_reference, get_pad_position, and add_via methods.
+- Updated mock_pcbnew module with realistic PAD, FOOTPRINT, and BOARD mock behaviors, including absolute rotated pad coordinate calculation and mock board persistence.
+- Added python tests in tests/test_rust_astar_router.py verifying all integration modes (PyO3, subprocess, REST), fallback auto-detection, and invalid modes.
+Why: Integrates the high-performance Rust routing core seamlessly into the Python placement & routing engine, providing multiple decoupling strategies.
