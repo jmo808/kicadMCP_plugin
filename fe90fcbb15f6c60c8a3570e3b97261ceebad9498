@@ -1,0 +1,9 @@
+Task: Implement A* pathfinding core in Rust (kbd_router/src/astar.rs)
+Summary of changes:
+- Implemented 3D grid-based A* routing core in Rust.
+- Defined neighbors (orthogonal steps + layer transitions), step costs, and heuristics.
+- Added support for via insertion at layer transitions.
+- Added support for grid mapping and obstacle avoidance.
+- Added logic to convert path points to trace segments, merging collinear points.
+- Wrote Rust unit tests covering empty grid routing, obstacle avoidance, via insertion, and routing failure.
+Why: Powers the high-performance routing pipeline core with correct pathfinding, obstacle avoidance, and via insertion.
