@@ -30,11 +30,15 @@ class DrcValidator:
 
         for i in range(len(items)):
             ref_a, data_a = items[i]
+            suffix_a = ref_a.split("_", 1)[1] if "_" in ref_a else ref_a
             x_a, y_a = data_a["x"], data_a["y"]
             r_a = self._get_radius(ref_a)
 
             for j in range(i + 1, len(items)):
                 ref_b, data_b = items[j]
+                suffix_b = ref_b.split("_", 1)[1] if "_" in ref_b else ref_b
+                if suffix_a == suffix_b:
+                    continue
                 x_b, y_b = data_b["x"], data_b["y"]
                 r_b = self._get_radius(ref_b)
 

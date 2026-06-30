@@ -35,7 +35,7 @@ def test_drc_validation_clearance_violation() -> None:
     # Radius sum is 10mm -> 9.5mm < 10mm + 0.5mm clearance threshold -> violation!
     placements = {
         "SW_0_0": {"x": 0.0, "y": 0.0, "rotation": 0.0, "footprint": "lib:SW_Cherry_MX"},
-        "D_0_0": {"x": 0.0, "y": 9.5, "rotation": 0.0, "footprint": "lib:D_SOD-123"},
+        "D_0_1": {"x": 0.0, "y": 9.5, "rotation": 0.0, "footprint": "lib:D_SOD-123"},
     }
     result = PlacementResult(placements=placements, valid=True)
     validator = DrcValidator(clearance_threshold_mm=1.0)
